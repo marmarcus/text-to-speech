@@ -1,24 +1,3 @@
-/*let speech = new SpeechSynthesisUtterance();
-
-let voices = [];
-
-let voiceSelect = document.querySelector("select");
-
-speech.rate = 1.1;
-voices = window.speechSynthesis.getVoices();
-speech.voice = voices[0];
-voices.forEach((voice, i) => (voiceSelect.options[i] = new Option(voice.name, i)));
-
-voiceSelect.addEventListener("change", () =>{
-    speech.voice = voices[voiceSelect.value];
-});
-
-document.getElementById("listen").addEventListener("click", () => {
-    speech.text = document.querySelector("textarea").value;
-    window.speechSynthesis.speak(speech);
-});
-*/
-
 onload = function() {
     if ('speechSynthesis' in window){
         var synth = speechSynthesis;
@@ -41,7 +20,7 @@ onload = function() {
         stopEle.addEventListener('click', onClickStop);
 
 // select voices////
-//var synth = window.speechSynthesis;
+//var synth = window.speechSynthesis;s
 
 var voiceSelect = document.querySelector("select");
 
@@ -83,6 +62,8 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
             if(!flag){
                 flag = true;
                 let utterance = new SpeechSynthesisUtterance();
+                utterance.rate = 1.1; /* Adjust voice speed */
+                utterance.volume = .7; /* Adjust voice volume */
                 utterance.text = document.querySelector("textarea").value;
 
                 //add voice//
@@ -96,6 +77,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
                 utterance.onend = function(){
                     flag = false;
                 };
+                
                 synth.speak(utterance);
 
                 //fix stop after a while bug
