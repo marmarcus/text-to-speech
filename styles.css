@@ -8,7 +8,7 @@
 .converter{
     width: 100%;
     min-height: 100vh;
-    background:radial-gradient(#181818, #121212);
+    background:radial-gradient(#19171A, #19171A);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,17 +16,18 @@
 }
 
 .converter h1{
-    color: whitesmoke;
+    color: #FFF;
     font-size: 50px;
     font-weight: 50;
     margin-top: -50px;
     margin-bottom: 50px;
+    letter-spacing: -1px;
 }
 
 textarea{
     width: 50%;
     height: 500px;
-    background-color:whitesmoke;
+    background-color:#f5f5f5;
     color:black;
     font-size: 15px;
     border: 0;
@@ -35,6 +36,9 @@ textarea{
     border-radius: 10px;
     resize: none;
     margin-bottom: 30px;
+}
+textarea::selection{
+    background: rgb(228, 128, 128);
 }
 
 textarea::placeholder{
@@ -57,14 +61,17 @@ button{
     outline: 0;
     display: flex;
     align-items: center;
+    background-color: #FFF;
 }
 
 select{
     flex: 1;
     height: 40px;
-    padding: 0 20px;
+    max-width: 55%;
+    padding: 0 10px;
     outline: 0;
     border: 0;
     border-radius: 35px;
+    background-color: #FFF;
 }
 
