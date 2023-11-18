@@ -10,4 +10,4 @@
 <p>A simple text to speech converter with various <i>free</i> features 
   since other text-to-speech website features costs money 
   and I'm a broke college student.</p>
-<p>Made to listen to lecture notes/slides or webnovels on the side.</p>
+
